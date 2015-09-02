@@ -29,9 +29,7 @@ For example:
 ```
 // in controller:
 $scope.scrollopts = {
-  wheelSpeed: 2,
-  wheelPropagation: true,
-  minScrollbarLength: 20
+	pause: 0.2
 };
 
 <!-- in template -->
@@ -42,7 +40,7 @@ $scope.scrollopts = {
 
 Or you may pass an object directly within template:
 ```
-<baron-scrollbar opts="{minScrollBarLength: 20}">
+<baron-scrollbar opts="{pause: 0.2}">
 	...
 </baron-scrollbar>
 ```
