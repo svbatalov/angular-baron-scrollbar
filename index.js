@@ -6,7 +6,7 @@ var insertcss = require('insert-css');
 var css = require('fs').readFileSync(__dirname + '/baron.css', 'utf8');
 insertcss(css, {prepend: true});
 
-require('./baron.min.js');  // creates window.baron object
+require('baron/baron.min.js');  // creates window.baron object
 
 module.exports = 'angular-baron-scrollbar';
 
