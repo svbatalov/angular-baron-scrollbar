@@ -1,0 +1,38 @@
+{
+  "name": "angular-perfect-scrollbar-2",
+  "version": "1.2.3",
+  "description": "A wrapper for perfect-scrollbar using its new CommonJS API and injecting CSS automatically.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -x angular -s angular-perfect-scrollbar-2 -t brfs -t browserify-css -t browserify-shim -p browserify-derequire index.js > dist/index.js",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "scroll",
+    "perfect-scrollbar",
+    "browserify"
+  ],
+  "author": "Sergey Batalov",
+  "license": "MIT",
+  "devDependencies": {
+    "brfs": "^1.4.1",
+    "browserify": "^11.0.1",
+    "browserify-css": "^0.6.1",
+    "browserify-derequire": "^0.9.4",
+    "browserify-shim": "^3.8.10",
+    "insert-css": "^0.2.0"
+  },
+  "dependencies": {
+    "perfect-scrollbar": "^0.6.4",
+    "qwery": "^4.0.0",
+    "xtend": "^4.0.0"
+  },
+  "browserify-css": {
+    "autoInject": true,
+    "minify": false
+  },
+  "browserify-shim": {
+    "angular": "global:angular"
+  }
+}

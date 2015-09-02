@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style type="text/css" media="screen">
+            .scroll-wrapper {
+                position: relative;
+                overflow: hidden;
+                height: 300px;
+                width: 250px;
+                border: 1px solid black;
+            }
+            .long {
+                width: 800px;
+            }
+            .block {
+                display: inline-block;
+            }
+            /* override scrollbar color; note double underscore in class names. */
+            .scroller__bar_h {
+                background: red;
+            }
+            .scroller__bar_v {
+                background: red;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="../dist/index.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app='app' ng-controller='ctrl'>
+
+        <div>
+            Line counter: {{list.length}}
+        </div>
+
+        <div class="block">
+            <p>Vertical scrollbar</p>
+            <baron-scrollbar class="scroll-wrapper">
+                <div ng-repeat="item in list">
+                    {{item}}
+                </div>
+            </baron-scrollbar>
+        </div>
+
+        <div class="block">
+            <p>Horizontal scrollbar</p>
+            <baron-scrollbar class="scroll-wrapper" direction="x">
+                <p class="long">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                    no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </baron-scrollbar>
+        </div>
+
+        <div class="block">
+            <p>Both scrollbars</p>
+            <baron-scrollbar class="scroll-wrapper" direction="xy">
+                <p class="long">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                    no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <div ng-repeat="item in list">
+                    {{item}}
+                </div>
+            </baron-scrollbar>
+        </div>
+    </body>
+</html>
