@@ -1,6 +1,6 @@
 {
   "name": "angular-baron-scrollbar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A wrapper for baron scrollbar library injecting required CSS automatically.",
   "main": "dist/index.js",
   "scripts": {

@@ -12,7 +12,7 @@ module.exports = 'angular-baron-scrollbar';
 
 var template =
 ' <div class="scroller_wrapper" > ' +
-'   <div class="scroller" ng-transclude></div>                              ' +
+'   <div class="scroller" in-view-container  ng-transclude></div>           ' +
 '   <div class="scroller__track_v">                                         ' +
 '     <div class="scroller__bar_v"></div>                                   ' +
 '   </div>                                                                  ' +

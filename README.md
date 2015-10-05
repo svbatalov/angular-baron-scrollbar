@@ -55,6 +55,10 @@ A working example can be found in the `example` directory. Just open `index.html
 * This is a UMD module, so it can be used in a stript tag and as a CommonJS/RequireJS module.
 * The CSS is prepended to `<head>` automatically (so that you can override it if you want;
   see `example/index.html` for example).
+* The `in-view-container` attribute is added to the scroller `div` so that
+  [angular-inview](https://github.com/thenikso/angular-inview) directive works. I did not find
+  a way to make this attribute optional, so feel free to let me know if you know how to do this.
+  This should be harmless if you do not use [angular-inview](https://github.com/thenikso/angular-inview).
 
 ### License
 MIT
