@@ -52,7 +52,7 @@ The `update` attribute may point to a variable from $scope. Setting this variabl
 A working example can be found in the `example` directory. Just open `index.html` in browser.
 
 ### Notes
-* This is a UMD module, so it can be used in a stript tag and as a CommonJS/RequireJS module.
+* This is a UMD module, so it can be used in a script tag and as a CommonJS/RequireJS module.
 * The CSS is prepended to `<head>` automatically (so that you can override it if you want;
   see `example/index.html` for example).
 * The `in-view-container` attribute is added to the scroller `div` so that
